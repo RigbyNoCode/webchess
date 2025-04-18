@@ -1,16 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <title>Chessboard Test</title>
- <style>
-  .center {
-    text-align: center;
-  }
- </style>
+  <style>
+    /* Centering the content */
+    body, html {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
 
-  <h1 class="center">Chessboard Tracker</h1>
-  <h2 class="center">By Bogdan Didic</h2>
+    /* Custom styling for the header */
+    h1, h2 {
+      margin: 0;
+    }
+
+    /* Styling the board container */
+    #board-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  </style>
+
   <!-- Load jQuery first -->
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
@@ -18,18 +36,16 @@
   <script src="chessboardjs-1.0.0/js/chessboard-1.0.0.js"></script>
   <link rel="stylesheet" href="chessboardjs-1.0.0/css/chessboard-1.0.0.min.css">
 
-  <style>
-    body {
-      padding: 20px;
-    }
-  </style>
 </head>
-<body class="center">
-  <div id="board1" style="width: 400px"></div>
+<body>
+  <!-- Board container to center content -->
+  <div id="board-container">
+    <h1>Chessboard Tracker</h1>
+    <h2>By Bogdan Didic</h2>
+    <div id="board1" style="width: 400px"></div>
+  </div>
 
   <!-- Custom JS -->
   <script src="./script.js"></script>
 </body>
 </html>
-
-
