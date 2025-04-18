@@ -3,5 +3,4 @@ var config = {
     draggable: true
   }
   
-  
   var board1 = ChessBoard('board1', config);
