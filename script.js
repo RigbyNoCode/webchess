@@ -1,6 +1,4 @@
-var config = {
-    position: 'start',
-    draggable: true
-  }
-  
-  var board1 = ChessBoard('board1', config);
+var board1 = Chessboard('board1', {
+  position: 'start',
+  pieceTheme: 'chessboardjs-1.0.0/img/chesspieces/wikipedia/{piece}.png'
+});
