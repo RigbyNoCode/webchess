@@ -2,7 +2,7 @@
 var board = Chessboard('myBoard', 'start');  // Initially set to 'start'
 
 function updateBoard() {
-  fetch('http://bogdanpi.local:8080/get_fen')
+  fetch('http://bogdanpi.local:8090/get_fen')
     .then(response => response.text())
     .then(fenString => {
       board.position(fenString);  // Update board with the new FEN string
