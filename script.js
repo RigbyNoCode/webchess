@@ -1,19 +1,17 @@
 
-var board = Chessboard('myBoard', 'start');  // Initially set to 'start'
+// Initialize the board initially with 'start' (default starting position)
+var board = Chessboard('myBoard', 'start');
 
-function updateBoard() {
-  fetch('http://bogdanpi.local:8090/get_fen')
+// Function to fetch FEN and update the board
+function fetchFEN() {
+  fetch('fen.txt')
     .then(response => response.text())
     .then(fenString => {
-      board.position(fenString);  // Update board with the new FEN string
+      board.position(fenString);  // Update the board position with the fetched FEN
     })
     .catch(error => console.error('Error fetching FEN:', error));
 }
 
-// You can call updateBoard periodically or based on an event to update the chessboard
-setInterval(updateBoard, 1000);  // Update board every second
-
-
-// Poll every 2 seconds
+// Poll every 2 seconds to fetch the updated FEN
 setInterval(fetchFEN, 2000);
 
