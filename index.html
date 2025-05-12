@@ -38,6 +38,12 @@
     <h1>CheckMate</h1>
     <h2>By Bogdan Didic</h2>
     <div id="myBoard" style="width: 400px"></div>
+    <script>
+postdisplay['init-chess-board'] = function (taskName) {
+	delete postdisplay[taskName]; // single-use task
+	ChessBoard('board');
+};
+</script>
   </div>
 
   <!-- Chessboard Script-->
