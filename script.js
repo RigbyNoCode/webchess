@@ -1,5 +1,5 @@
 
- var board = Chessboard('myBoard', 'start');
+ var board = Chessboard('myBoard', 'fen');
 
   function fetchFEN() {
     fetch('fen.txt')
