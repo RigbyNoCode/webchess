@@ -7,7 +7,7 @@
 //var board = Chessboard('board1', Lopez)
 
 
-const board = Chessboard('board', {
+const board = Chessboard('board1', {
     position: 'start'
 });
 
