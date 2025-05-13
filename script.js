@@ -13,7 +13,8 @@ fetch('fen.txt')
   .then(fen => {
     var fent = fen.trim(); // 
     const board = Chessboard('board1', {
-     position: fent
+     position: fent,
+     pieceTheme: 'chessboardjs-1.0.0/img/chesspieces/wikipedia/{piece}.png'
     });
   })
   .catch(err => console.error('Error loading FEN:', err));
