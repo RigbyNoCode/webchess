@@ -7,20 +7,20 @@
 //var board = Chessboard('board1', Lopez)
 
 
-const board = Chessboard('board1', {
-    position: 'start'
-});
 
 fetch('load_fen.php')
   .then(response => response.text())
   .then(fen => {
-    board.position(fen.trim());
+    var fent = fen.trim(); // 
+    const board = Chessboard('board1', {
+      position: fent
+    });
   })
   .catch(err => console.error('Error loading FEN:', err));
-
 
 // Initial load
 updateBoardFromFEN();
 
 // Poll every 2 seconds
 setInterval(updateBoardFromFEN, 2000);
+
