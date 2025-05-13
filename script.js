@@ -20,9 +20,7 @@ fetch('fen.txt?t=' + new Date().getTime())
   .catch(err => console.error('Error loading FEN:', err));
 
 
-// Initial load
-updateBoardFromFEN();
-
-// Poll every 2 seconds
-setInterval(updateBoardFromFEN, 2000);
+setInterval(function() {
+  location.reload();  // This reloads the entire page
+}, 3000);  // 3000 milliseconds = 3 seconds
 
