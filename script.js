@@ -8,7 +8,7 @@
 
 
 
-fetch('fen.txt')
+fetch('fen.txt?t=' + new Date().getTime())
   .then(response => response.text())
   .then(fen => {
     var fent = fen.trim(); // 
