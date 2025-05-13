@@ -8,15 +8,16 @@
 
 
 
-fetch('load_fen.php')
+fetch('fen.txt')
   .then(response => response.text())
   .then(fen => {
     var fent = fen.trim(); // 
     const board = Chessboard('board1', {
-      position: fent
+     position: fent
     });
   })
   .catch(err => console.error('Error loading FEN:', err));
+
 
 // Initial load
 updateBoardFromFEN();
