@@ -11,14 +11,13 @@ const board = Chessboard('board', {
     position: 'start'
 });
 
-function updateBoardFromFEN() {
-    fetch('fen.txt')
-        .then(response => response.text())
-        .then(fen => {
-            board.position(fen.trim());
-        })
-        .catch(error => console.error("Failed to fetch FEN:", error));
-}
+fetch('load_fen.php')
+  .then(response => response.text())
+  .then(fen => {
+    board.position(fen.trim());
+  })
+  .catch(err => console.error('Error loading FEN:', err));
+
 
 // Initial load
 updateBoardFromFEN();
